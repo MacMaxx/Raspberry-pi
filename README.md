@@ -28,10 +28,15 @@ Repository for documenting Raspberry Pi experiments
 ```
 This will expose the Raspberry Pi as `hostname.local` (by default; raspberrypi.local)
 
+5. Set hostname
+```
+> sudo raspi-config (I set hostname to `raspberry`)
+```
+
 # Login
 Using `terminal` to `ssh` into raspberry:
 ```
-> ssh pi@raspberrypi.local
+> ssh pi@raspberry.local
 ```
 
 ```
