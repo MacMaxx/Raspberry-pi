@@ -19,6 +19,12 @@ Repository for documenting Raspberry experiments
 ```
 > Mac address of Pi always starts with b8:27:eb
 
+4. Install avahi-deamon as described [here](https://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/)
+```
+> sudo apt-get install avahi-daemon
+```
+This will expose the Raspberry Pi as `hostname.local` (by default; raspberrypi.local)
+
 # Login
 Using `terminal` to `ssh` into raspberry:
 ```
