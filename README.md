@@ -28,7 +28,7 @@ This will expose the Raspberry Pi as `hostname.local` (by default; raspberrypi.l
 # Login
 Using `terminal` to `ssh` into raspberry:
 ```
-> ssh pi@<IP address>
+> ssh pi@raspberrypi.local
 ```
 
 ```
