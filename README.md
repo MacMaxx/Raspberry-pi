@@ -2,6 +2,12 @@
 
 Repository for documenting Raspberry experiments
 
+
+![Raspberry Pi 3B](./Raspberry-pi/RaspberryPi3.jpg)
+      
+
+
+
 # References:
 * www.raspberrypi.org
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
