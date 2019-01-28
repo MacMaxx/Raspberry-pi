@@ -15,9 +15,20 @@ Repository for documenting Raspberry experiments
 
 3. To figure out IP address of Raspberry Pi in network use terminal and type:
 ```
->terminal$ arp -an | grep b8:27:eb
+> arp -an | grep b8:27:eb
 ```
 > Mac address of Pi always starts with b8:27:eb
+
+# Login
+Using `terminal` to `ssh` into raspberry:
+```
+> ssh pi@<IP address>
+```
+
+```
+> sudo apt-get update
+> sudo apt-get upgrade
+```
 
 # Setup
 
