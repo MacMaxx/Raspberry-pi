@@ -6,6 +6,7 @@ Repository for documenting Raspberry Pi experiments
       
 # References:
 * www.raspberrypi.org
+* [w3schools](https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp)
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 # Initial setup
