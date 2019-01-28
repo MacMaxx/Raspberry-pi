@@ -1,13 +1,9 @@
 ## 1905 RHAV
 
-Repository for documenting Raspberry experiments
+Repository for documenting Raspberry Pi experiments
 
-
-![Raspberry Pi 3B](./Raspberry-pi/RaspberryPi3.jpg)
+![Raspberry Pi 3B](https://github.com/MacMaxx/Raspberry-pi/blob/master/Raspberry-pi/RaspberryPi3.jpg "Image of the Pi")
       
-
-
-
 # References:
 * www.raspberrypi.org
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
