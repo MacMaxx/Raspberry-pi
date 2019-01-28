@@ -2,7 +2,7 @@
 
 Repository for documenting Raspberry Pi experiments
 
-![Raspberry Pi 3B](https://github.com/MacMaxx/Raspberry-pi/blob/master/Raspberry-pi/RaspberryPi3.jpg "Image of the Pi")
+![Raspberry Pi 3B](https://github.com/MacMaxx/Raspberry-pi/blob/master/RaspberryPi3.jpg "Image of the Pi")
       
 # References:
 * www.raspberrypi.org
