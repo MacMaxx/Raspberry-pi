@@ -36,6 +36,12 @@ Using `terminal` to `ssh` into raspberry:
 > sudo apt-get upgrade
 ```
 
+> BEWARE: in case of repeating `The authenticity of host 'raspberrypi.local <snip>' can't be established.
+ECDSA key fingerprint is <snip>.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'raspberrypi.local,<snip>' (ECDSA) to the list of known hosts.` warnings (after reinstalling Raspberry), clear the .ssh/known_hosts file on the local machine from which you `ssh` into the Raspberry
+
+
 # Setup
 
 ## Packages installed:
