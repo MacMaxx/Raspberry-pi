@@ -42,6 +42,7 @@ Using `terminal` to `ssh` into raspberry:
 ```
 > sudo apt-get update
 > sudo apt-get upgrade
+> sudo apt-get dist-upgrade   //updage installed packages
 ```
 
 > BEWARE: in case of repeating `The authenticity of host 'raspberrypi.local <snip>' can't be established.
