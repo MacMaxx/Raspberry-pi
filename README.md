@@ -59,6 +59,8 @@ Search for available packages:
 ```
 
 ## Packages installed:
+### Mosquitto MQTT Broker (&client for testing)
+
 * [Mosquitto MQTT Broker](https://mosquitto.org/)
 ```
 > sudo apt install mosquitto
@@ -73,7 +75,7 @@ Required for testing mosquitto installation.
 ```
 > sudo apt install mosquitto-clients
 ```
-### Testing Mosquitto setup
+#### Testing Mosquitto setup
 Open two ssh teminals to raspberry; 1 for subscribing, the other for publishing.
 
 ```
@@ -85,5 +87,5 @@ Should yield something alike:
 Client mosqsub/9585-raspberry received PUBLISH (d0, q0, r0, m0, 'mytopic', ... (10 bytes))
 rik is gek
 ```
-
+Alternative MQTT client for Mac; [mqttbox](http://workswithweb.com/mqttbox.html)
 
