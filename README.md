@@ -18,31 +18,31 @@ Repository for documenting Raspberry Pi experiments
 
 3. To figure out IP address of Raspberry Pi in network use terminal and type:
 ```
-> arp -an | grep b8:27:eb
+shell> arp -an | grep b8:27:eb
 ```
 > Mac address of Pi always starts with b8:27:eb
 
 4. Install avahi-deamon as described [here](https://www.howtogeek.com/167190/how-and-why-to-assign-the-.local-domain-to-your-raspberry-pi/)
 ```
-> sudo apt-get install avahi-daemon
+shell> sudo apt-get install avahi-daemon
 ```
 This will expose the Raspberry Pi as `hostname.local` (by default; raspberrypi.local)
 
 5. Set hostname
 ```
-> sudo raspi-config (I set hostname to `raspberry`)
+shell> sudo raspi-config (I set hostname to `raspberry`)
 ```
 
 # Login
 Using `terminal` to `ssh` into raspberry:
 ```
-> ssh pi@raspberry.local
+shell> ssh pi@raspberry.local
 ```
 
 ```
-> sudo apt update         //update installed packages
-> sudo apt upgrade        //upgrade installed packages
-> sudo apt dist-upgrade   //upgrade installed distribution (raspbian)
+shell> sudo apt update         //update installed packages
+shell> sudo apt upgrade        //upgrade installed packages
+shell> sudo apt dist-upgrade   //upgrade installed distribution (raspbian)
 ```
 
 > BEWARE: in case of repeating `The authenticity of host 'raspberrypi.local <snip>' can't be established.
@@ -55,7 +55,7 @@ Warning: Permanently added 'raspberrypi.local,<snip>' (ECDSA) to the list of kno
 
 Search for available packages:
 ``` 
-> apt search <packagename>
+shell> apt search <packagename>
 ```
 
 ## Packages installed:
@@ -63,7 +63,7 @@ Search for available packages:
 
 * [Mosquitto MQTT Broker](https://mosquitto.org/)
 ```
-> sudo apt install mosquitto
+shell> sudo apt install mosquitto
 ```
 > TODO: MAKE MOSQUITTO START @ RASPBERRY BOOT
 
@@ -73,14 +73,14 @@ Search for available packages:
 Required for testing mosquitto installation.
 
 ```
-> sudo apt install mosquitto-clients
+shell> sudo apt install mosquitto-clients
 ```
 #### Testing Mosquitto setup
 Open two ssh teminals to raspberry; 1 for subscribing, the other for publishing.
 
 ```
-ssh1 > mosquitto_sub -d -t mytopic                    //start as deamon and subscribe to mytopic
-ssh2 > mosquitto_pub -d -t mytopic -m "rik is gek" .  //start as deamon and publish to mytopic
+shell1> mosquitto_sub -d -t mytopic                    //start as deamon and subscribe to mytopic
+shell2> mosquitto_pub -d -t mytopic -m "rik is gek" .  //start as deamon and publish to mytopic
 ```
 Should yield something alike:
 ```
