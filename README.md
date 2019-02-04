@@ -40,9 +40,9 @@ Using `terminal` to `ssh` into raspberry:
 ```
 
 ```
-> sudo apt-get update
-> sudo apt-get upgrade
-> sudo apt-get dist-upgrade   //updage installed packages
+> sudo apt update         //update installed packages
+> sudo apt upgrade        //upgrade installed packages
+> sudo apt dist-upgrade   //upgrade installed distribution (raspbian)
 ```
 
 > BEWARE: in case of repeating `The authenticity of host 'raspberrypi.local <snip>' can't be established.
@@ -53,5 +53,20 @@ Warning: Permanently added 'raspberrypi.local,<snip>' (ECDSA) to the list of kno
 
 # Setup
 
+Search for available packages:
+``` 
+> apt search <packagename>
+```
+
 ## Packages installed:
-* [package name](link to package goes here)
+* [Mosquitto MQTT Broker](https://mosquitto.org/)
+```
+> sudo apt install mosquitto
+```
+
+* [Mosquitto MQTT Client](https://mosquitto.org/)
+Required for testing mosquitto installation.
+
+```
+> sudo apt install mosquitto-clients
+```
