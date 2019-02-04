@@ -63,10 +63,27 @@ Search for available packages:
 ```
 > sudo apt install mosquitto
 ```
+> TODO: MAKE MOSQUITTO START @ RASPBERRY BOOT
+
 
 * [Mosquitto MQTT Client](https://mosquitto.org/)
+
 Required for testing mosquitto installation.
 
 ```
 > sudo apt install mosquitto-clients
 ```
+### Testing Mosquitto setup
+Open two ssh teminals to raspberry; 1 for subscribing, the other for publishing.
+
+```
+ssh1 > mosquitto_sub -d -t mytopic                    //start as deamon and subscribe to mytopic
+ssh2 > mosquitto_pub -d -t mytopic -m "rik is gek" .  //start as deamon and publish to mytopic
+```
+Should yield something alike:
+```
+Client mosqsub/9585-raspberry received PUBLISH (d0, q0, r0, m0, 'mytopic', ... (10 bytes))
+rik is gek
+```
+
+
