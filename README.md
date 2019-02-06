@@ -124,3 +124,9 @@ Add ```mqtt``` for pushing mqtt data into mqtt database; set password = ```mqtt`
 ```
 MariaDB [mqtt]> GRANT ALL PRIVILEGES ON mqtt.* TO mqtt@localhost IDENTIFIED BY 'mqtt';
 ```
+#### Node.js & mySQL/Mosquitto modules
+Node.js is default installed on Raspbian.
+```mysql```module requires installation using Node Package Manager (npm) as described on https://www.w3schools.com/nodejs/nodejs_mysql.asp:
+```
+shell> sudo npm install mysql
+```
