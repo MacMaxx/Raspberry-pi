@@ -38,6 +38,7 @@ Using `terminal` to `ssh` into raspberry:
 ```
 shell> ssh pi@raspberry.local
 ```
+Password: default password since I'm running pi in local network only.
 
 ```
 shell> sudo apt update         //update installed packages
@@ -88,4 +89,30 @@ Client mosqsub/9585-raspberry received PUBLISH (d0, q0, r0, m0, 'mytopic', ... (
 rik is gek
 ```
 Alternative MQTT client for Mac; [mqttbox](http://workswithweb.com/mqttbox.html)
+
+### MySQL server and client (for maintenance & testing)
+General information:
+* [MySQL](https://www.mysql.com/)
+* [Installation instructions](https://raspberrytips.nl/mysql-installeren-op-raspberry-pi/)
+
+####Istallation:
+```
+shell> sudo apt install mysql-server
+```
+For maintenance of DB login as ```root``` in MySQL
+```
+shell> sudo mysql -p -u root
+```
+Password = admin
+#### Setup:
+* Login to mySQL
+* Create a new database for storing massages posted in MQTT topics
+```
+MariaDB [(none)]> CREATE DATABASE mqtt;
+```
+* Set ```mqtt``` database for default use
+```
+MariaDB [(none)]> USE mqtt;
+```
+
 
