@@ -114,7 +114,11 @@ MariaDB [(none)]> CREATE DATABASE mqtt;
 ```
 MariaDB [(none)]> USE mqtt;
 ```
-Add ```mqtt_user``` to mqtt database; set password = ```mqtt```
+Add ```mqtt_user``` for retrieving mqtt database data; set password = ```mqtt```
 ```
 MariaDB [mqtt]> GRANT ALL PRIVILEGES ON mqtt.* TO mqtt_user@localhost IDENTIFIED BY 'mqtt';
+```
+Add ```mqtt``` for pushing mqtt data into mqtt database; set password = ```mqtt```
+```
+MariaDB [mqtt]> GRANT ALL PRIVILEGES ON mqtt.* TO mqtt@localhost IDENTIFIED BY 'mqtt';
 ```
