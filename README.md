@@ -32,6 +32,8 @@ This will expose the Raspberry Pi as `hostname.local` (by default; raspberrypi.l
 ```
 shell> sudo raspi-config (I set hostname to `raspberry`)
 ```
+6. Set "wait for network on boot";
+I set "wait for network on boot" to ensure Pi is connected to network before starting all services; else this might e.g. mysql to fail booting.
 
 # Login
 Using `terminal` to `ssh` into raspberry:
