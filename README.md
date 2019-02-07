@@ -124,6 +124,17 @@ Add ```mqtt``` for pushing mqtt data into mqtt database; set password = ```mqtt`
 ```
 MariaDB [mqtt]> GRANT ALL PRIVILEGES ON mqtt.* TO mqtt@localhost IDENTIFIED BY 'mqtt';
 ```
+Create table to contain all the messages received from mqtt
+```
+mqtt@mysql> CREATE TABLE `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `topic` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+)
+```
+
 #### Node.js & mySQL/Mosquitto modules
 Node.js is default installed on Raspbian. While Node Package Manager (npm) isn't:
 ```
