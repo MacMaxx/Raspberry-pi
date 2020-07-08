@@ -8,6 +8,8 @@ Repository for documenting Raspberry Pi experiments
 * www.raspberrypi.org
 * [w3schools](https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp)
 * [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Ubiquiti](https://www.ui.com/)
+* [Unifi Controller on RaspberryPi](https://raspberrypi.tilburgs.com/unifi-controller/)
 
 # Initial setup
 1. Setup SD card with raspbian as described on https://www.raspberrypi.org/downloads/raspbian/ and follow [installation guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
@@ -62,6 +64,24 @@ shell> apt search <packagename>
 ```
 
 ## Packages installed:
+### Unifi Controller
+
+* [Unifi Controller on RaspberryPi](https://raspberrypi.tilburgs.com/unifi-controller/)
+
+Just applied all instructions as suggested, being:
+
+```
+shell > sudo apt -y install oracle-java8-jdk
+shell > sudo apt -y install dirmngr
+shell > echo 'deb http://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /etc/apt/sources.list.d/100-ubnt-unifi.list
+shell > sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ubnt.com/unifi/unifi-repo.gpg
+shell > sudo apt update
+shell > sudo apt -y install unifi
+shell > sudo systemctl stop mongodb
+shell > sudo systemctl disable mongodb
+shell > sudo reboot
+```
+
 ### Mosquitto MQTT Broker (&client for testing)
 
 * [Mosquitto MQTT Broker](https://mosquitto.org/)
