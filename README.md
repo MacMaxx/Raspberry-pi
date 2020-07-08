@@ -82,6 +82,33 @@ shell > sudo systemctl disable mongodb
 shell > sudo reboot
 ```
 
+After reboot the Unifi Controller should be reacheable via browseer at http://raspberry.local:8443 or http://<ip of raspberry pi>:8443. Which failed in my case ("This site can't be reached."), so continued with following:
+      
+```
+shell > sudo su
+shell > apt install dirmngr
+shell > echo deb http://ppa.launchpad.net/openjdk-r/ppa/ubuntu trusty main >> /etc/apt/sources.list.d/glennr-install-script.list
+shell > apt-key adv --keyserver keyserver.ubuntu.com --recv EB9B1D8886F44E2A
+shell > apt-get update
+shell > apt-get install openjdk-8-jre-headless
+```
+After which to stop & restart the Unifi service:
+
+```
+shell > service unifi stop
+shell > touch /etc/default/unifi
+shell > apt purge oracle-java8-jdk -y
+shell > sed -i 's/^JAVA_HOME/#JAVA_HOME/' /etc/default/unifi
+shell > echo "JAVA_HOME="$( readlink -f "$( which java )" | sed "s:bin/.*$::" )"" >> /etc/default/unifi
+shell > service unifi start
+```
+
+Still unifi controller fails to start ('service unifi status' ... failed!')
+So resided to [install scripts by UI Glenn](https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-UniFi-Lets-Encrypt-or-Ubuntu-16-04-18-04-/ccbc7530-dd61-40a7-82ec-22b17f027776)
+
+This resolved Unifi failing to start.
+webinterface is available at https://<raspberry ip>:8443
+
 ### Mosquitto MQTT Broker (&client for testing)
 
 * [Mosquitto MQTT Broker](https://mosquitto.org/)
